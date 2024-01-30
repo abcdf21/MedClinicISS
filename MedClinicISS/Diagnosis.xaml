@@ -1,0 +1,36 @@
+﻿<Page x:Class="MedClinicISS.Diagnosis"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:MedClinicISS"
+      mc:Ignorable="d" 
+          xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+    Title="MainWindow" Height="1080" Width="1920" Background="#5ED6AB">
+
+    <Grid>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+            <TextBlock  Text="Добавление записи в таблицу Диагнозы" FontSize="60" HorizontalAlignment="Center" Foreground="Black"></TextBlock>
+            <TextBox x:Name="Name" Grid.Row="1" FontSize="35" Padding="10, 25, 0,0" HorizontalAlignment="Center" Background="#D9D9D9" 
+                    VerticalAlignment="Center" Width="700" Height="100" materialDesign:HintAssist.Hint="Введите название диагноза"></TextBox>
+            <TextBox x:Name="Discription" Grid.Row="2" FontSize="35" Padding="10, 25, 0,0" HorizontalAlignment="Center" Background="#D9D9D9" 
+                    VerticalAlignment="Center" Width="700" Height="100" materialDesign:HintAssist.Hint="Введите описание диагноза"></TextBox>
+            <Button x:Name="add_upd" Click="add_upd_Click" Grid.Row="3" Width="500" Content="Добавить запись"
+                    FontSize="35"
+                    Height="100"
+                    HorizontalAlignment="Center" Style="{x:Null}"/>
+            <Button x:Name="Cancel" Click="cancel_Click" Grid.Row="4" Width="500" FontSize="35" Content="Отменить"
+                    Height="100"
+                    HorizontalAlignment="Center" Style="{x:Null}"/>
+        </Grid>
+        <Frame x:Name="backFrame" NavigationUIVisibility="Hidden"/>
+    </Grid>
+</Page>
+

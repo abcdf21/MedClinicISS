@@ -1,0 +1,55 @@
+﻿<Window x:Class="MedClinicISS.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MedClinicISS"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        mc:Ignorable="d"
+        Background="#5ED6AB"
+        Title="MainWindow" Height="1080" Width="1920">
+    <Grid>
+        <Grid Margin="20">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1.5*"/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition />
+            </Grid.RowDefinitions>
+
+            <TextBlock FontSize="45" Text="Авторизация" VerticalAlignment="Bottom" HorizontalAlignment="Center"/>
+
+            <TextBox x:Name="login"
+                    Grid.Row="1"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    Width="700"
+                    FontSize="35"
+                    Height="100"
+                    Padding="25"
+                    Background="White"
+                    materialDesign:HintAssist.Hint="Введите логин"/>
+
+            <PasswordBox x:Name="password"
+                        Grid.Row="2"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Top"
+                        Width="700"
+                        FontSize="35"
+                        Height="100"
+                        Padding="25"
+                        Background="White"
+                        materialDesign:HintAssist.Hint="Введите пароль"/>
+
+            <Button x:Name="enter"
+                    Grid.Row="3"
+                    Width="500"
+                    FontSize="35"
+                    Height="100"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Top"
+                    Content="Войти"
+                    Style="{x:Null}" Click="LoginButton_Click"/>
+        </Grid>
+    </Grid>
+</Window>

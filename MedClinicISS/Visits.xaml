@@ -1,0 +1,58 @@
+﻿<Page x:Class="MedClinicISS.Visits"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:MedClinicISS"
+      mc:Ignorable="d" 
+                  xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+Title="MainWindow" Height="1080" Width="1920" Background="#5ED6AB">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1.5*"/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <TextBlock Grid.Row="0" x:Name="role" Grid.ColumnSpan="2" Text="Добавление записи в таблицу Визиты" FontSize="60" HorizontalAlignment="Center"  Margin="0, 15, 0, 0"/>
+
+        <ComboBox x:Name="PatinetComboBox" Grid.Row="1" Background="#D9D9D9" Width="500" Height="100" VerticalAlignment="Center" HorizontalAlignment="Right" Margin=" 0,0,15,0" 
+                    VerticalContentAlignment="Center" Padding="10,0,0,0" materialDesign:HintAssist.Hint="Выберите пациента" FontSize="35"/>
+
+        <ComboBox x:Name="DiagnosComboBox" Grid.Row="1" Grid.Column="1" Background="#D9D9D9" Width="500" Height="100" VerticalAlignment="Center" HorizontalAlignment="Left" Margin=" 15,0,0,0" 
+                    VerticalContentAlignment="Center" Padding="10,0,0,0" materialDesign:HintAssist.Hint="Выберите диагноз" FontSize="35"/>
+
+        <ComboBox x:Name="AppointmentComboBox" Grid.Row="2" Background="#D9D9D9" Width="500" Height="100" VerticalAlignment="Center" HorizontalAlignment="Right" Margin=" 0,0,15,0" 
+                    VerticalContentAlignment="Center" Padding="10,0,0,0" materialDesign:HintAssist.Hint="Выберите назначение" FontSize="35"/>
+
+        <ComboBox x:Name="RecipeComboBox" Grid.Row="2" Grid.Column="1" Background="#D9D9D9" Width="500" Height="100" VerticalAlignment="Center" HorizontalAlignment="Left" Margin=" 15,0,0,0" 
+                    VerticalContentAlignment="Center" Padding="10,0,0,0" materialDesign:HintAssist.Hint="Выберите рецепт" FontSize="35"/>
+
+        <ComboBox x:Name="ResultComboBox" Grid.ColumnSpan="2" Grid.Row="3" Background="#D9D9D9" Width="500" Height="100" VerticalAlignment="Center" HorizontalAlignment="Center" 
+                    VerticalContentAlignment="Center" Padding="10,0,0,0" materialDesign:HintAssist.Hint="Выберите результат" FontSize="35"/>
+
+        <DatePicker Name="visitDate" Grid.Row="4" Grid.ColumnSpan="2"  Padding="10,0,0,0" Width="500" Height="100" Background="#D9D9D9" 
+                    materialDesign:HintAssist.Hint="Выберите дату визита" FontSize="35" IsEnabled="False"/>
+
+        <Button x:Name="add_upd" Click="add_upd_Click" Grid.Row="5" Width="500" Content="Добавить запись"
+        FontSize="35"
+        Height="100"
+        HorizontalAlignment="Center" Style="{x:Null}" Grid.ColumnSpan="2"/>
+        <Button x:Name="Cancel" Click="cancel_Click" Grid.Row="6" Width="500" FontSize="35" Content="Отменить"
+        Height="100"
+        HorizontalAlignment="Center" Style="{x:Null}" Grid.ColumnSpan="2"/>
+
+        <Frame x:Name="backFrame" Grid.RowSpan="10" Grid.ColumnSpan="10"/>
+
+    </Grid>
+</Page>
